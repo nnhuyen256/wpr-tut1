@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Survey Form</title>
+    <meta charset="UTF-8">
+    <style>
+        html {
+            box-sizing: border-box;
+            font-size: 18px;
+        }
+
+        body {
+            font-family: sans-serif;
+            margin: 0px;
+        }
+
+        .header {
+            background-color: rgb(130, 213, 216);
+            color: black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .column {
+            float: left;
+            padding: 10px;
+        }
+
+        .column-side {
+            width: 0%;
+        }
+
+        .column-middle {
+            width: 100%;
+        }
+
+        .row:after {
+            content: " ";
+            display: table;
+            clear: both;
+        }
+
+        .footer {
+            background-color: cadetblue;
+            padding: 5px;
+        }
+
+        .register-form {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border-left: 1px double black;
+            border-right: 1px double black;
+        }
+
+        .table {
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        #form {
+            border-spacing: 15px;
+            color: gray;
+        }
+
+        p {
+            text-align: center;
+            color: gray;
+        }
+
+        #form th {
+            color: gray;
+            text-align: right;
+            width: 50%;
+        }
+
+        .submit {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .submit button {
+            padding: 10px 15px;
+            border-radius: 5px;
+            background-color: lightseagreen;
+            color: white;
+            border: none;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Survey Form</h1>
+    </div>
+
+    <div class="row">
+        <div class="column-side">
+        </div>
+        <div class="column-middle">
+            <div class="register-form">
+                <form action="" method="post">
+                    <p>Let us know how we can improve freeCodeCamp</p>
+                    <div class="table">
+                        <table id="form">
+                            <tr>
+                                <div class="input-box">
+                                    <th>*Name: </th>
+                                    <td><input type="text" placeholder="Enter your name"></td>
+                                </div>
+                            </tr>
+                            <tr>
+                                <div class="input-box">
+                                    <th>*Email: </th>
+                                    <td><input type="email" placeholder="Enter your email"></td>
+                                </div>
+                            </tr>
+                            <tr>
+                                <div class="input-box">
+                                    <th>*Age: </th>
+                                    <td><input type="text" placeholder="Age"></td>
+                                </div>
+                            </tr>
+
+                            <div class="select-box">
+                                <tr>
+                                    <th>Which option best describes your current role: </th>
+                                    <td><select id="role">
+                                            <option value="student">Student</option>
+                                            <option value="teacher">Teacher</option>
+                                        </select></td>
+                                </tr>
+                            </div>
+
+                            <div class="radio-button">
+                                <tr>
+                                    <th rowspan="3">How likely is that you would recommend freeCodeCamp to a friend?
+                                    </th>
+                                    <td><input type="radio" id="definitely" name="level" value="definitely">
+                                          <label for="definitely">Definitely</label></td>
+                                </tr>
+                                <tr>
+                                      <td><input type="radio" id="maybe" name="level" value="maybe">
+                                          <label for="maybe">Maybe</label></td>
+                                </tr>
+                                <tr>
+                                      <td><input type="radio" id="notsure" name="level" value="notsure">
+                                          <label for="notsure">Not sure</label></td>
+                                </tr>
+                            </div>
+                            <div class="select-box">
+                                <tr>
+                                    <th>What do you like most in FCC: </th>
+                                    <td><select id="option">
+                                            <option value="option">Select an option</option>
+                                        </select></td>
+                                </tr>
+                            </div>
+                            <div class="check-box">
+                                <tr>
+                                    <th rowspan="11">Things that should be improved in the future (Check all that apply)
+                                    </th>
+                                    <td><input type="checkbox" id="improve" name="improve" value="front-end">
+                                        <label for="front-end">Front-end Projects</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" id="improve" name="improve" value="back-end">
+                                        <label for="back-end">Back-end Projects</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" id="improve" name="improve" value="data-visualization">
+                                        <label for="data-visualization">Data Visualization</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" id="improve" name="improve" value="challengers">
+                                        <label for="challengers">Challengers</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" id="improve" name="improve" value="open-source">
+                                        <label for="open-source">Open Source Community</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" id="improve" name="improve" value="gitter-help-roams">
+                                        <label for="gitter-help-roams">Gitter help roams</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" id="improve" name="improve" value="video">
+                                        <label for="video">Video</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" id="improve" name="improve" value="city-meetups">
+                                        <label for="city-meetups">City meetups</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" id="improve" name="improve" value="wiki">
+                                        <label for="wiki">Wiki</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" id="improve" name="improve" value="forum">
+                                        <label for="forum">Forum</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" id="improve" name="improve" value="additional-course">
+                                        <label for="additional-course">Additional Courses</label>
+                                    </td>
+                                </tr>
+                            </div>
+                            <div class="text">
+                                <tr>
+                                    <th>Any comments or suggestions? </th>
+                                    <td><textarea name="message" rows="2"
+                                            cols="30">Enter your comment here...</textarea></td>
+                                </tr>
+                            </div>
+                        </table>
+                        <div class="submit">
+                            <button type="submit">
+                                Submit
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="column-side">
+        </div>
+    </div>
+    </div>
+    <div class="footer">
+    </div>
+</body>
+
+</html>
