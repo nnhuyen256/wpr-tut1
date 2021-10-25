@@ -1,0 +1,100 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.col-6{
+    float: left;
+    width: 50%;
+    color: #7b5b30;
+}
+.margin_b{
+    margin-bottom: 7.5px;
+}
+.clear{
+    clear: both;
+}
+header{
+    background-color: #cbb087;
+    min-height: 70px;
+    padding: 15px;
+}
+main{
+    background-color: #f9f8dc;
+    min-height: 300px;
+    padding: 7.5px 15px;
+}
+footer{
+    background-color: #cbb087;
+    min-height: 70px;
+    padding: 15px;
+}
+h1{
+    color:#773e06;
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+.register-form{
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #e9a44d;
+    padding: 15px;
+    border: 2px dotted #cccccc;
+    border-radius: 10px;
+}
+
+.input-box{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.input-box input[type='text'],
+.input-box input[type='email'],
+.input-box input[type='password'],
+.input-box input[type='date']{
+    padding: 10px 15px;
+    width: 100%;
+    border: 1px solid #cccccc;
+    outline: none;
+    font-size: 16px;
+    display: inline-block;
+    height: 40px;
+    color: #666666;
+}
+.input-box select{
+    padding: 7.5px 15px;
+    width: 100%;
+    border: 1px solid #cccccc;
+    outline: none;
+    font-size: 16px;
+    display: inline-block;
+    height: 40px;
+    color: #666666;
+}
+.input-box option{
+    font-size: 16px;
+}
+.closed{
+    font-size: 14px;
+    color: #7b5b30;
+}    
+.btn-box{
+    text-align: right;
+    margin-top: 30px;
+}
+.btn-box button{
+    padding: 10px 25px;
+    border-radius: 10px;
+    background-color: #773e06;
+    color: #ffffff;
+    border: none;
+    outline: none;
+}
