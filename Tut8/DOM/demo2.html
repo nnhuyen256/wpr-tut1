@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển đổi tiền tệ</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        main {
+            padding-left: 20%;
+            padding-right: 20%;
+        }
+
+        form {
+            padding: 20px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        button {
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: 1px solid blue;
+            color: white;
+            background-color: violet;
+        }
+
+        .btn {
+            margin-top: 15px;
+        }
+
+        .amount {
+            float: left;
+            width: 30%;
+        }
+
+        .fromCurrency {
+            float: left;
+            width: 30%;
+        }
+
+        .toCurrency {
+            float: left;
+            width: 30%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header></header>
+        <main>
+            <form action="#" method="post">
+                <div class="amount">
+                    <label for="amount"><b>Amount</b></label><br />
+                    <input type="number" name="amount" id="amount" placeholder="Input amount">
+                </div>
+                <div class="fromCurrency">
+                    <label for="fromCurrency"><b>From Currency</b></label><br />
+                    <select id="fromCurrency" name="fromCurrency">
+                        <option value="vietnam" id="vietnam" selected>Viet Nam</option>
+                        <option value="usa" id="usa">USA</option>
+                        <option value="china" id="china">China</option>
+                    </select>
+                </div>
+                <div class="toCurrency">
+                    <label for="toCurrency"><b>To Currency</b></label><br />
+                    <select id="toCurrency" name="toCurrency">
+                        <option value="usa" id="usa" selected>USA</option>
+                        <option value="vietnam" id="vietnam">Viet Nam</option>
+                        <option value="china" id="china">China</option>
+                    </select>
+                </div>
+                <div class="btn">
+                    <button onclick="convert" id="convert">Convert</button>
+                </div>
+            </form>
+            <span id="result">Result: </span>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+<script>
+    let amountInput = document.getElementsById('amount');
+    let convert = document.getElementById('convert');
+    let fromCurrency = document.getElementById('fromCurrency');
+    let toCurrency = document.getElementById('toCurrency');
+    let result = document.getElementById('result');
+    var usa, vietnam, china;
+
+    function vietnam() {
+       usa.value = parseFloat(amountInput) * 0.000044;
+       china.value = parseFloat(amountInput) * 0.00028;
+    }
+
+    function usa() {
+        vietnam.value = parseFloat(amountInput) * 22665.46;
+        china.value = parseFloat(amountInput) * 6.39;
+    }
+
+    function china() {
+        vietnam.value = parseFloat(amountInput) * 3544.26;
+        usa.value = parseFloat(amountInput) * 0.16;
+    }
+</script>
+
+</html>
